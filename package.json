@@ -1,0 +1,20 @@
+{
+  "name": "vikings-bakery",
+  "version": "1.0.0",
+  "description": "Site pentru brutarie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server",
+    "go": " sass --watch resurse/css/nav_bar.scss:resurse/css/nav_bar.css"
+  },
+  "keywords": [],
+  "author": "Giurgescu Rares",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9"
+  }
+}

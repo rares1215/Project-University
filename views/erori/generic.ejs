@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include('../fragmente/head') %>
+        <title>⚠️ Eroare Internă</title>
+</head>
+
+<body>
+    <%- include('../fragmente/header') %>
+
+        <h1>⚠️ O eroare a apărut!</h1>
+        <p>Ne pare rău, a apărut o eroare internă.</p>
+        <p>Detalii eroare: <%= eroare %>
+        </p>
+        <img src="/resurse/imagini/erori/default.png" alt="Eroare Generică">
+        <a href="/">Înapoi la pagina principală</a>
+
+        <%- include('../fragmente/footer') %>
+</body>
+
+</html>

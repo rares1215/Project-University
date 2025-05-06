@@ -1,0 +1,263 @@
+@charset "UTF-8";
+/* =============================
+    NAV MENU STYLING - SASS
+   ============================= */
+/* ===== STRUCTURA MENIU ===== */
+nav {
+  background: #8B4513;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 10;
+}
+nav ul li {
+  position: relative;
+  padding: 18px 25px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #8B4513, #D2B48C, #8B4513);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #D2B48C;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav ul li ul li {
+  padding: 12px 25px;
+}
+nav ul li ul li a {
+  color: #8B4513;
+  display: block;
+  transition: background 0.5s ease-in-out;
+}
+nav ul li ul li a:hover {
+  background: #A0522D;
+  color: #fff;
+  outline: 2px solid #8B4513;
+  outline-offset: 2px;
+  transition: background 0.3s ease;
+}
+nav ul li:hover > ul {
+  transform: scale(1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    padding: 10px 15px;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+  nav ul li a[href="#"]::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    font-style: normal;
+  }
+  nav ul li a[href="#"] {
+    font-size: 0;
+  }
+  nav ul li a[href="#"]::before {
+    font-size: 1.2rem;
+  }
+}
+/* ===== MENIU BURGER PENTRU ECRANE MICI ===== */
+.burger {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #333;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  /* Tranziție pentru efect la click */
+}
+
+@media (max-width: 700px) {
+  nav {
+    position: relative;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background: #8B4513;
+    /* Culoarea principală */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    clip-path: circle(0% at 0 0);
+    /* Efect circular inițial */
+    transition: clip-path 0.9s ease-in-out;
+    /*  Tranziție lină */
+    z-index: 1000;
+    opacity: 0;
+    /* Inițial invizibil */
+  }
+  nav ul li {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #D2B48C;
+  }
+  nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  nav ul li a:hover {
+    background: #6B8E23;
+    color: #fff;
+  }
+  nav ul li a::after {
+    display: none !important;
+    /*  Eliminăm bara glisantă */
+  }
+  .burger {
+    display: block;
+  }
+  /*  Efect de deschidere circulară */
+  .burger.active + nav ul {
+    clip-path: circle(150% at 0 0);
+    /* Efect de extindere circulară */
+    opacity: 1;
+  }
+  .burger span {
+    width: 30px;
+    /* Lățimea fiecărui dreptunghi */
+    height: 4px;
+    /* Înălțimea dreptunghiului */
+    background: #333;
+    /* Culoarea de fundal */
+    margin: 5px 0;
+    /* Spațiu între dreptunghiuri */
+  }
+}
+/* Ajustare pentru a nu dezactiva toate tranzițiile */
+@media (max-width: 700px) {
+  .grid-container {
+    font-size: 0.8rem;
+  }
+  body,
+  p,
+  h1,
+  h2,
+  h3 {
+    transition: none !important;
+    /* Dezactivăm tranzițiile doar pentru text */
+  }
+}
+@media (max-width: 1000px) {
+  .home-text {
+    display: none;
+    /* Ascunde textul "Acasa" */
+  }
+  .home-icon {
+    display: inline-block;
+    /* Afișează iconița */
+    font-size: 1.5rem;
+    /* Mărește dimensiunea iconiței */
+  }
+}
+@media (min-width: 1001px) {
+  .home-icon {
+    display: none !important;
+    /* Ascunde iconița pe ecrane mari */
+  }
+}
+/* =============================
+   STILIZARE LINKURI - SASS
+   ============================= */
+a:not(nav a, footer a) {
+  color: #8B4513;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+a:not(nav a, footer a):visited {
+  color: #A0522D;
+}
+a:not(nav a, footer a):active {
+  border: 2px solid #FF4500;
+  padding: 2px;
+}
+
+a[href^=http] {
+  position: relative;
+}
+a[href^=http]::before {
+  content: "⮳";
+  font-size: 150%;
+  margin-right: 5px;
+  color: #D2B48C;
+  transition: color 0.3s ease-in-out;
+}
+a[href^=http]:hover::before {
+  color: #FFD700;
+}
+
+main a {
+  background-image: radial-gradient(circle, #8B4513 0%, #8B4513 20%, transparent 60%, transparent 100%);
+  background-position: center;
+  background-size: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease-in-out ease-in-out;
+}
+main a:hover {
+  background-size: 100%;
+}
+
+footer a {
+  transition: all 0.3s ease-in-out;
+  color: #D2B48C;
+  background-image: radial-gradient(circle, #D2B48C 0%, #D2B48C 20%, transparent 60%, transparent 100%);
+  background-position: center;
+  background-size: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease-in-out ease-in-out;
+}
+footer a:hover {
+  background-size: 100%;
+}
+
+/*# sourceMappingURL=nav_bar.css.map */

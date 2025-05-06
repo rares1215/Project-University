@@ -1,0 +1,831 @@
+/* =============================
+   SCHEMA CROMATICĂ - RUSTIC & NATURAL
+   ============================= */
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stilurile tale personalizate vin aici */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    /* Culoare principală */
+    --primary-color: #8B4513;
+    /* Maro închis */
+
+    /* Culori secundare */
+    --background-light: #F5DEB3;
+    /* Bej deschis */
+    --secondary-color: #D2B48C;
+    /* Crem */
+    --highlight-color: #6B8E23;
+    /* Verde măsliniu */
+    --text-background: #FAF0E6;
+    /* Alb murdar */
+
+    /* Culori pentru text */
+    --text-color: #3E2723;
+    /* Maro închis pentru text */
+    --text-light: #FFFFFF;
+    /* Alb pentru contrast */
+
+    /* Borduri și umbre */
+    --border-color: #A67B5B;
+    /* Maro nisipiu pentru borduri */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    /* Umbre discrete */
+}
+
+/* TITLUL PAGINII */
+.title {
+    margin: 3rem;
+    text-align: center;
+}
+
+/* =============================
+   UTILIZAREA VARIABILELOR CSS
+   ============================= */
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+}
+
+/* button {
+    background-color: var(--highlight-color);
+    color: var(--text-light);
+    border: 2px solid var(--border-color);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+} */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Stilizare generală pentru formula MathML */
+math {
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 2px solid #8B4513;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Stilizare pentru variabile */
+mi {
+    color: #8B4513;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Stilizare pentru operatori */
+mo {
+    color: #6B8E23;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 4px;
+    /* Spațiere între operatori și termeni */
+}
+
+/* Stilizare pentru numere */
+mn {
+    color: #D2691E;
+    font-size: 1.1rem;
+}
+
+/* Stilizare pentru fracții */
+mfrac {
+    background-color: #f0e6d6;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px dashed #8B4513;
+}
+
+/* =============================
+   BUTON "BACK TO TOP"
+   ============================= */
+
+/* Stil pentru link-ul de revenire sus */
+#link-top {
+    position: fixed;
+    /* Poziționare fixă în pagină */
+    bottom: 20px;
+    /* Distanța față de partea de sus */
+    right: 20px;
+    /* Distanța față de partea stanga */
+    width: 50px;
+    /* Dimensiunea butonului */
+    height: 50px;
+    background-color: var(--primary-color);
+    /* Culoarea principală */
+    color: var(--text-light);
+    /* Culoare text */
+    border-radius: 50%;
+    /* Formă rotundă */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    opacity: 0.7;
+    /* Semi-transparent */
+    transition: background-color 0.5s ease, opacity 0.3s ease;
+}
+
+/* Hover: schimbare de culoare și opacitate */
+#link-top:hover {
+    background-color: var(--highlight-color);
+    /* Culoare mai închisă */
+    opacity: 1;
+    /* Devine complet vizibil */
+}
+
+/* Tooltip (text explicativ la hover) */
+#link-top::after {
+    content: "La inceput!";
+    /* Text explicativ */
+    position: absolute;
+    top: 60px;
+    /* Poziționat sub butonului */
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#link-top:hover::after {
+    opacity: 1;
+    /* Devine vizibil la hover */
+}
+
+/* STILIZARE TABEL - CELE MAI VÂNDUTE PRODUSE (ECRAN MARE) */
+
+.table-container {
+    max-width: 100%;
+    margin: 20px 0;
+    border: 5px inset var(--border-color);
+    padding: 10px;
+}
+
+/* Tabel normal pentru ecrane mari */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+thead th {
+    padding: 10px;
+}
+
+thead th:hover+th {
+    background-color: green;
+    /* Schimbă fundalul în verde */
+}
+
+tbody tr:nth-child(odd) {
+    border-bottom: 1px solid var(--highlight-color);
+    /* Alternanță culori bordură */
+}
+
+tbody tr:nth-child(even) {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+td,
+th {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Hover Effect - Apare outline treptat */
+tbody tr:hover {
+    outline: 5px solid rgba(0, 0, 0, 0.7);
+    transition: outline 0.5s ease;
+}
+
+
+/* STILIZARE TABURI & IFRAME */
+
+/* Container pentru taburi */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: row-reverse;
+}
+
+/* Stilizare butoane taburi */
+.tab {
+    background-color: var(--background-light);
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+/* Tab activ */
+.tab.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Hover effect */
+.tab:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-light);
+}
+
+/* Container pentru iframe */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--border-color);
+    padding: 10px;
+    background: white;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Stilizare iframe */
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+/* =============================
+    LAYOUT RESPONSIVE - GRID
+   ============================= */
+
+/* Stilizare generală */
+html {
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* =============================
+   GRID LAYOUT RESPONSIVE
+   ============================= */
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "zona1 zona1 zona1"
+        "zona5 zona2 zona4"
+        "zona3 zona2 zona4"
+        "zona3 zona6 zona7"
+        "zona8 zona8 zona8";
+    gap: 15px;
+    padding: 20px;
+    font-size: 1.1rem;
+    /* Dimensiune implicită pentru desktop */
+    transition: font-size 0.3s ease-in-out;
+    /* Tranziție lină */
+}
+
+/* Definirea zonelor */
+.zona1 {
+    grid-area: zona1;
+}
+
+.zona2 {
+    grid-area: zona2;
+}
+
+.zona3 {
+    grid-area: zona3;
+}
+
+.zona4 {
+    grid-area: zona4;
+}
+
+.zona5 {
+    grid-area: zona5;
+}
+
+.zona6 {
+    grid-area: zona6;
+}
+
+.zona7 {
+    grid-area: zona7;
+}
+
+.zona8 {
+    grid-area: zona8;
+}
+
+/* Stilizare de bază  setam valorile pentru toate sectiunile */
+.grid-container section {
+    background: #f5f5dc;
+    /* Culoare bej */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* Tranziție pentru adaptare */
+}
+
+/* Tabel Responsive */
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #8B4513;
+}
+
+th {
+    background: #D2B48C;
+}
+
+/* =============================
+LAYOUT RESPONSIVE - SECTIUNEA 8
+   ============================= */
+
+.zona8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* Secțiuni generale */
+.section-container {
+    width: 80%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.section-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Stilizare suplimentară */
+.section-container h3 {
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.section-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* =============================
+   CSS PENTRU PRINTARE - PROIECT COMPLET
+   ============================= */
+
+#banner-proiect {
+    display: none;
+}
+
+.watermark {
+    display: none;
+}
+
+@media print {
+
+    /* General */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: black;
+    }
+
+    /* Banner-ul proiectului */
+    #banner-proiect {
+        display: block;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        border: 4px inset black;
+        padding: 10px;
+        page-break-after: always;
+    }
+
+    /* Ascunderea elementelor media */
+    img,
+    video,
+    iframe,
+    figure,
+    .iframe-container,
+    figcaption,
+    #link-top {
+        display: none !important;
+    }
+
+    /* Afișarea grid-ului ca block */
+    .grid-layout,
+    .zona8,
+    .main-container,
+    .section-container {
+        display: block !important;
+    }
+
+    /* Linkuri ca text simplu */
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* Heading-ul de nivel 1 */
+    h1 {
+        text-align: center;
+        page-break-after: avoid;
+    }
+
+    /* Meniul afișat ca listă neordonată */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    nav ul li ul {
+        display: none;
+        /* Ascunderea sub-opțiunilor */
+    }
+
+    /*  break după meniu și înainte de footer */
+    nav {
+        page-break-after: always;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    /* break  inainte de secitunea cofetarie */
+    #sectiune-cofetarie {
+        page-break-before: always;
+    }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.4;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+    /* Margini pentru pagini din stânga și dreapta */
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-right: 3cm;
+        margin-left: 1cm;
+    }
+
+    @page :even {
+        margin-top: 4cm;
+    }
+
+    /* Alte secțiuni generale */
+    header,
+    .zona1,
+    .zona2,
+    .zona3,
+    .zona4,
+    .zona5,
+    .zona6,
+    .zona7,
+    .zona8 {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* Ajustarea tabelului pentru print */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background: #ddd;
+    }
+}
+
+/* =============================
+   STILIZARE VIDEO - CSS
+   ============================= */
+
+video {
+    width: 90%;
+    /* Se va adapta la lățimea ecranului */
+    max-width: 600px;
+    /* Lățime maximă pentru a nu fi prea mare */
+    min-width: 300px;
+    /* Lățime minimă pentru a fi vizibil pe ecrane mici */
+    height: auto;
+    /* Păstrează proporțiile videoclipului */
+    display: block;
+    margin: 20px auto;
+    /* Centrare și un spațiu între elemente */
+    border: 2px solid #8B4513;
+    /* Culoare maro din schema cromatică */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Umbră ușoară pentru aspect estetic */
+
+    object-fit: cover;
+    /* Posterul este scalat uniform fără a distorsiona */
+    object-position: center;
+    /* Posterul este centrat în interiorul videoclipului */
+}
+
+/*video::poster {
+    width: 70%;
+    /* Se potrivește cu dimensiunea videoclipului */
+/* height: 70%;
+  /*  max-width: 600px;
+    /* Lățime maximă pentru a nu fi prea mare */
+/* min-width: 300px;
+    object-fit: cover;
+    /* Păstrează proporțiile posterului */
+/* object-position: center;
+    /* Centrare poster 
+}
+
+/* Subtitrări stilizate */
+::cue {
+    background: white;
+    color: green;
+    /* Text maro închis */
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+::cue(i) {
+    font-style: italic;
+}
+
+/* =============================
+   EFECT CSS REFLEXIE PENTRU TITLU
+   ============================= */
+
+h1 {
+    position: relative;
+    font-size: 3rem;
+    color: #8B4513;
+    /* Culoare maro din schema cromatică */
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Reflexie */
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: rgba(139, 69, 19, 0.4);
+    /* Culoare maro deschisă pentru reflexie */
+    transform: scaleY(-1);
+    /* Efect de oglindire verticală */
+    filter: blur(2px);
+    /* Reflexie ușor blurată */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+/* Efect la hover: reflexia se alungește */
+h1:hover::after {
+    transform: scaleY(-1.5);
+    /* Reflexia se alungește */
+    filter: blur(4px);
+    /* Reflexie mai blurată la hover */
+}
+
+
+/* =============================
+   STILIZARE HR - CSS
+   ============================= */
+
+hr {
+    border: none;
+    /* Eliminăm stilul implicit */
+    height: 2px;
+    /* Grosimea liniei */
+    background: linear-gradient(to right,
+            #8B4513 0%,
+            /* Maro din schema cromatică */
+            #8B4513 40%,
+            transparent 50%,
+            /* Spațiu transparent în centru */
+            #8B4513 60%,
+            #8B4513 100%);
+    position: relative;
+    margin: 40px auto;
+    /* Spațiu mărit sus și jos */
+    width: 80%;
+    /* Lățime adaptabilă */
+    border-radius: 4px;
+    /* Colțuri ușor rotunjite */
+    overflow: visible;
+    /* Permite afișarea elementelor ::after */
+}
+
+/* Steluța decorativă */
+hr::after {
+    content: "✵";
+    /* Simbol steluță decorativă */
+    position: absolute;
+    top: -20px;
+    /* Ridicăm steluța deasupra liniei */
+    left: 50%;
+    /* Poziționăm pe centru */
+    transform: translateX(-50%);
+    background: white;
+    /* Fundal alb pentru a masca linia */
+    padding: 0 10px;
+    /* Spațiu pe lateral pentru fundal alb */
+    color: #A0522D;
+    /* Culoare maro deschis din schema cromatică */
+    font-size: 28px;
+    /* Dimensiunea steluței */
+    line-height: 1;
+    /* Aliniere perfectă pe verticală */
+    z-index: 1;
+    /* Asigurăm afișarea deasupra liniei */
+}
+
+/* =============================
+    EFECT CSS DUOTONE
+   ============================= */
+
+.duotone-image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    background-image: url('../imagini/imagine_mica.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin: 20px auto;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Efectul de bază - Duotone c1 și c2 */
+.duotone-image::before,
+.duotone-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    /* Combinare a culorilor */
+    transition: all 0.5s ease-in-out;
+    /* Tranziție lină */
+    pointer-events: none;
+    /* Previne interacțiunea cu straturile */
+}
+
+.duotone-image::before {
+    background-color: #8B4513;
+    /* Culoare c1 - maro */
+    opacity: 0.7;
+}
+
+.duotone-image::after {
+    background-color: #D2B48C;
+    /* Culoare c2 - crem */
+    opacity: 0.5;
+}
+
+/* Efect la hover - Duotone c3 și c4 */
+.duotone-image:hover::before {
+    background-color: #6B8E23;
+    /* Culoare c3 - verde măsliniu */
+}
+
+.duotone-image:hover::after {
+    background-color: #A0522D;
+    /* Culoare c4 - maro deschis */
+}

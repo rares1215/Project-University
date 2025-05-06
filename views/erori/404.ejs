@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include('../fragmente/head') %>
+        <title>❌ Eroare 404</title>
+</head>
+
+<body>
+    <%- include('../fragmente/header') %>
+
+        <h1>❌ Eroare 404 - Pagina nu a fost găsită</h1>
+        <p>Pagina "<%= pagina %>" pe care o cauți nu există.</p>
+        <img src="/resurse/imagini/erori/404.png" alt="Eroare 404">
+        <a href="/">Înapoi la pagina principală</a>
+
+        <%- include('../fragmente/footer') %>
+</body>
+
+</html>

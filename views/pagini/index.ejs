@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../fragmente/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include("../fragmente/header") %>
+    </header>
+    <main class="grid-container">
+        <!-- Zona 1: Prezentare -->
+        <section class="zona1">
+            <h2>Bine ai venit la Vikings Bakery</h2>
+            <p>Suntem o afacere locala cu produse de brutărie și cofetărie proaspete.</p>
+            <!-- <img src="resurse/imagini/banner.jpg" alt="Banner brutărie"> -->
+        </section>
+
+        <!-- Zona 3: Calendar Evenimente -->
+        <section class="zona3">
+            <h2>Evenimente viitoare</h2>
+            <p>În curând vom avea degustări și promoții speciale!</p>
+        </section>
+
+        <!-- Zona 2: Tabel Produse -->
+        <section class="zona2">
+            <h2>Top Produse</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produs</th>
+                            <th>Categorie</th>
+                            <th>Preț (lei)</th>
+                            <th>Nr. Vânzări</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pâine cu maia</td>
+                            <td>Brutărie</td>
+                            <td>15</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>Baghetă franțuzească</td>
+                            <td>Brutărie</td>
+                            <td>10</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Tort ciocolată</td>
+                            <td>Cofetărie</td>
+                            <td>20</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Croissant cu unt</td>
+                            <td>Patiserie</td>
+                            <td>8</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Zona 4: Anunțuri -->
+        <section class="zona4">
+            <h2>Anunțuri</h2>
+            <p>Reducere specială la prima comandă!</p>
+            <p>Calculul prețului după aplicarea reducerii:</p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mi>Preț Redus</mi>
+                    <mo>=</mo>
+                    <mi>Preț inițial</mi>
+                    <mo>×</mo>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>-</mo>
+                    <mfrac>
+                        <mi>Reducere</mi>
+                        <mn>100</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                </mrow>
+            </math>
+        </section>
+
+        <!-- Zona 5: Utilizatori Online -->
+        <section class="zona5">
+            <h2>Utilizatori activi</h2>
+            <p>În curând vei putea vedea cine este pe site!</p>
+        </section>
+
+        <!-- Zona 6: Statistici -->
+        <section class="zona6">
+            <h2>Statistici</h2>
+            <p>Am servit peste 10.000 de clienți fericiți!</p>
+        </section>
+
+        <!-- Zona 7: Informații Site & Server -->
+        <section class="zona7">
+            <h2>Informații</h2>
+            <p>Telefon: <a href="tel:0790823451">0790823451</a></p>
+            <p>Email: <a href="mailto:vikingsbakery@gmail.com">vikingsbakery@gmail.com</a></p>
+            <p>Locație: <a href="https://maps.app.goo.gl/31p1dP8rp6GKTuuD7" target="_blank">Vezi pe hartă</a></p>
+        </section>
+
+        <section class="zona8">
+            <h2>Conținut Extra</h2>
+
+            <!-- Despre Noi -->
+            <section id="Despre" class="section-container">
+                <h3>Despre Noi</h3>
+                <p>Suntem o afacere locală începută din pasiunea pentru brutărie și cofetărie și din dorința de a oferi
+                    oamenilor produse proaspete din ingrediente simple și naturale.</p>
+                <p>Produsele noastre au un gust unic și delicios datorită ingredientelor de calitate și modului de
+                    preparare.</p>
+                <p>Afacerea noastră oferă produse de brutărie, patiserie și cofetărie proaspete, preparate în fiecare
+                    zi!</p>
+            </section>
+
+            <hr>
+
+            <!-- Brutarie -->
+            <section id="Produse" class="section-container">
+                <h3>Brutarie</h3>
+                <p><em>Pâinea noastră este făcută cu <b>maia</b>, natural, ceea ce oferă un gust desăvârșit și o textură
+                        foarte bună produsului nostru, pe lângă alte beneficii cum ar fi:</em></p>
+                <ol>
+                    <li>
+                        <blockquote><q>Aluatul cu maia este bogat în două tipuri de substanțe favorabile digestiei:
+                                fibrele alimentare și prebioticele. Ambele hrănesc bacteriile bune din intestin.</q>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote><q><i>În timpul procesului de fermentare, bacteriile de acid lactic din aluatul cu
+                                    maia modifică structura carbohidraților într-un mod care reduce indicele glicemic al
+                                    pâinii. Acest lucru, la rândul său, încetinește viteza cu care glucoza pătrunde în
+                                    fluxul sanguin.</i></q></blockquote>
+                    </li>
+                </ol>
+                <p>Pentru mai multe informații despre beneficiile pâinii cu maia puteți intra <a target="_blank"
+                        href="https://www.schaer.com/ro-ro/a/beneficiile-painii-cu-aluat-cu-maia">aici</a>.</p>
+                <video controls preload="metadata" poster="">
+                    <source src="./resurse/videoclip/videoclip.mp4" type="video/mp4">
+
+                    <!-- Subtitrări în limba română (default) -->
+                    <track src="./resurse/videoclip/subtitrari_ro.vtt" kind="subtitles" srclang="ro" label="Română"
+                        default>
+
+                    <!-- Subtitrări în limba engleză -->
+                    <track src="./resurse/videoclip/subtitrari_en.vtt" kind="subtitles" srclang="en" label="English">
+
+                    Your browser does not support the video tag.
+                </video>
+
+
+            </section>
+            <section id="sectiune-cofetarie" class="section-container">
+                <h3>Cofetarie</h3>
+                <p>Produsele noastre de cofetiarie sunt facute cu ingrediente de calitate si sunt facute sa fie
+                    sanatoase insa fara a pierde din vedere gustul acestora.</p>
+                <p>Avem o gama larga de dulciuri precum:</p>
+                <ol>
+                    <li>
+                        <p>Tarte</p>
+                    </li>
+                    <li>
+                        <p>Torturi</p>
+                    </li>
+                    <li>
+                        <p>Lista completa de produse este <a href="">aici</a></p>
+                    </li>
+                </ol>
+                <details>
+                    <summary>Oferte produse</summary>
+                    <p> 2+1 pentru tarte! </p>
+                    <p>50% reducere la prima comanda de tort!</p>
+                </details>
+                <div class="duotone-image"></div>
+            </section>
+
+            <!-- Produse Brutarie -->
+            <!-- <section class="section-container">
+                <h3>Produse Brutarie</h3>
+                <figure>
+                    <img src="resurse/imagini/imagine_mare.jpg"
+                        sizes="(min-width:1000px) 800px, (min-width:600px) 600px, 200px"
+                        srcset="resurse/imagini/imagine_medie.jpg 600w, resurse/imagini/imagine_mica.jpg 200w"
+                        alt="Chifle cu maia" />
+                    <figcaption>Chifle cu maia proaspete</figcaption>
+                </figure>
+            </section> -->
+
+            <!-- Rețete Video -->
+            <section class="section-container">
+                <h3>Rețete Video</h3>
+                <div class="tab-container">
+                    <button class="tab active" data-video="video1">Pâine cu Maia</button>
+                    <button class="tab" data-video="video2">Fursecuri fără zahăr</button>
+                </div>
+                <div class="iframe-container">
+                    <iframe id="iframe-display" src="https://www.youtube.com/embed/NieQHjCHnxg" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    </main>
+
+
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+
+    <script src="./resurse/Js/script.js"></script>
+    <a href="#top" id="link-top">&#5123;</a>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,52 @@
+/* =============================
+   📱 RESPONSIVITATE TABEL - PE ECRANE MICI ȘI MEDII
+   ============================= */
+
+@media (max-width: 700px) {
+    .table-container {
+        padding: 5px;
+        /* Reduce padding-ul pentru spațiu mai eficient */
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        /* Redimensionare text pentru lizibilitate */
+        padding: 8px;
+        /* Ajustare padding */
+    }
+}
+
+/* Responsive: Ecran mic */
+@media (max-width: 700px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Responsive Typography pentru ecrane mici */
+@media (max-width: 700px) {
+    .grid-container {
+        font-size: 0.8rem;
+        /* Font mai mic pe ecrane mici */
+    }
+
+    body,
+    p,
+    h1,
+    h2,
+    h3 {
+        transition: none !important;
+        /* Dezactivăm tranzițiile doar pentru text */
+    }
+}
+
+/* Responsive layout zona 8 pentru ecran mic! */
+
+@media (max-width: 700px) {
+    .section-container {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
